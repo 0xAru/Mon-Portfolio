@@ -1,0 +1,22 @@
+{% block main %}
+	<main class="main-login">
+		<div class="login-card">
+			<h2 class="titleH2">Connexion</h2>
+			<div>
+				<form action="/login" method="POST" class="modern-form">
+					<div class="form-group">
+						<input type="text" placeholder="Email" name="email" id="email" class="form-control" required>
+					</div>
+					<br>
+					<div class="form-group">
+						<input type="password" placeholder="Mot de passe" name="password" id="password" class="form-control" required>
+					</div>
+					<br>
+					<div class="form-group btn btn-form">
+						<button type="submit" class="login-button">Se connecter</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+{% endblock %}

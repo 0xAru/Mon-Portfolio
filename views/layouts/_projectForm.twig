@@ -1,0 +1,38 @@
+{% block main %}
+		<div class="container-add-project">
+			<h2 class="titleH2">Ajouter un nouveau projet à mon portfolio</h2>
+			<form {% if project %} action="/updateProject/{{project.id}}" {% else %} action="/addProject" {% endif %} method="POST" enctype="multipart/form-data" class="modern-form">
+				<div class="form-group">
+					<label for="title">Titre du projet:</label>
+					<input type="text" name="title" id="title" {% if project %} value="{{project.title}}" {% endif %} class="form-control">
+					<p class="error">{{errors.title.message}}</p>
+				</div>
+				<div class="form-group">
+					<label for="url">Lien du projet:</label>
+					<input type="text" name="url" id="url" {% if project %} value="{{project.url}}" {% endif %} class="form-control">
+					<p class="error">{{errors.url.message}}</p>
+				</div>
+				<div class="form-group">
+					<label for="description">Description du projet:</label>
+					<textarea name="description" id="description" class="form-control">{{project.description}}</textarea>
+				</div>
+				<div class="form-group">
+					<label for="techno">Technologies utilisées:</label>
+					<input type="text" id="techno" name="techno" {% if project %} value="{{project.techno}}" {% endif %} class="form-control">
+				</div>
+				<div class="form-group addImage">
+					<label for="image">Ajouter une image:</label>
+					<input type="file" id="image" name="image" {% if project %} value="{{project.image}}" {% endif %} class="form-control">
+				</div>
+				<div class="form-group btn btn-form">
+					<button type="submit" class="update-button">
+						{% if project %}
+							Modifier
+						{% else %}
+							Ajouter le projet
+						{% endif %}
+					</button>
+				</div>
+			</form>
+		</div>
+{% endblock %}

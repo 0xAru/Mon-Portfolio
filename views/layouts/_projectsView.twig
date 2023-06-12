@@ -1,0 +1,43 @@
+{% for project in projects %}
+	<div class="container-project">
+		<div class="card">
+			<h2>{{project.title}}</h2>
+			<a href="/uploads/{{project.image}}" target="_blank">
+				<img src="/uploads/{{project.image}}" alt="Image du projet" class="project-img">
+			</a>
+			<div class="center">
+				<p>
+					<a href="{{project.url}}">
+						<i class='bx bx-link' id="link-icon"></i>
+						Lien vers ce projet
+					</a>
+				</p>
+				<p class="underline">Description:</p>
+				<br>
+				<p>
+					{{project.description}}
+				</p>
+				<p class="underline">Technologies utilisées:
+					<br>
+				</p>
+				<p>
+					{{project.techno}}
+				</p>
+				{% if session.adminId %}
+					<div class="flex">
+						<div class=" form-group btn btn-form">
+							<a href="/updateProject/{{project.id}}">
+								<button type="button" class="update-button">Modifier</button>
+							</a>
+						</div>
+						<div class=" form-group btn btn-form">
+							<a href="/deleteProject/{{project.id}}">
+								<button type="button" class="update-button">Supprimer</button>
+							</a>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endfor %}
