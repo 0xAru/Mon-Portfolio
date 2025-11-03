@@ -37,7 +37,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 13%;
+    padding: 2% 10%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
@@ -78,18 +78,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30vh;
+    padding: 10% 10%;
     background-image: url(../images/background-lines.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.home-img {
+    flex: 1;
+}
+
 .home-img img {
-    width: 17vw;
-    margin-left: 15rem;
+    width: 15vw;
+    margin-left: 10rem;
     border-radius: 50%;
     box-shadow: 5px 5px 5px 5px var(--main-color);
+}
+
+.home-content {
+    flex: 3;
 }
 
 .home-content h3 {
@@ -113,7 +121,7 @@ span {
 }
 
 .home-content p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .social-media a {
@@ -466,12 +474,7 @@ span {
 
 @media(max-width: 1700px) {
 
-    .home {
-        padding: 25vh;
-    }
-
     .home-img img {
-        width: 22vw;
         margin-top: 4rem;
     }
 
@@ -483,13 +486,9 @@ span {
 
 @media(max-width: 1500px) {
 
-    .home {
-        padding: 20% 8%;
-    }
-
     .home-img img {
-        width: 25vw;
-        margin: 4rem 0 0 5rem;
+        margin-right: 5rem;
+        width: 18vw;
     }
 
     .about {
@@ -512,15 +511,6 @@ span {
 @media(max-width: 1200px) {
     html {
         font-size: 55%;
-    }
-
-    .home {
-        padding: 20% 10%;
-    }
-
-    .home-img img {
-        width: 30vw;
-        margin-top: 4rem 0 0 2rem;
     }
 
     .about img {
@@ -565,13 +555,9 @@ span {
         margin: 3rem 0;
     }
 
-    .home {
-        padding: 20% 7%;
-    }
-
     .home-img img {
-        width: 30vw;
-        margin-top: 4rem 1rem 0 5rem;
+        width: 20vw;
+        padding-top: 2vh
     }
 
     .about {
@@ -612,8 +598,8 @@ span {
 @media (max-width: 768px) {
 
     .home {
-        flex-direction: column;
-        padding: 25% 7%;
+        flex-direction: column-reverse;
+        padding: 15% 8%;
     }
 
     .home-content h3 {
@@ -625,8 +611,9 @@ span {
     }
 
     .home-img img {
-        width: 45vw;
-        margin-top: 6rem 10rem 0 8rem;
+        width: 35vw;
+        padding: 0;
+        margin: 0 0 6vh 0;
     }
 
     .about {
