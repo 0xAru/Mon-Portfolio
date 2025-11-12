@@ -188,8 +188,7 @@ span {
 .about-content {
     text-align: left;
     line-height: 1.5;
-    margin-right: 10vw;
-    margin-left: 3vw;
+    padding: 0 15rem 0 15rem;
 }
 
 .about-content h3 {
@@ -197,7 +196,7 @@ span {
 }
 
 .about-content p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 2rem 0 3rem;
 }
 
@@ -243,10 +242,7 @@ span {
 .container-project {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    padding: 3rem 3rem 5rem 3rem;
+    justify-content: space-between;
     font-size: 1.7rem;
     line-height: 3.5rem;
 }
@@ -272,13 +268,13 @@ span {
     margin: 1em;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
+.flex.flex-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    row-gap: 5rem;
+    justify-items: center;
+    align-items: stretch;
+    margin-bottom: 5rem;
 }
 
 .center {
@@ -287,12 +283,29 @@ span {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 5rem;
+    margin: 2rem 0 2rem 0;
+    padding: 0 10rem 0 10rem ;
+}
+
+.container-project a {
+    display: flex;
+    justify-content: center;
+}
+
+.project-link {
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.techno-used {
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    font-weight: 500;
 }
 
 .project-img {
-    width: 100%;
-    height: 70%;
+    width: 750px;
+    height: 500px;
     object-fit: cover;
     border-radius: 1rem;
 }
@@ -307,15 +320,17 @@ span {
 }
 
 .card {
-    width: 100%;
-    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
 }
 
 
 #projects {
     text-align: center;
     font-size: 3.5rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
 }
 
 .projects {
@@ -484,6 +499,25 @@ span {
 
 }
 
+@media(max-width: 1600px) {
+    .flex.flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-project {
+        width: 45%;
+        padding: 2rem;
+    }
+
+    .project-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+}
+
 @media(max-width: 1500px) {
 
     .home-img img {
@@ -496,16 +530,13 @@ span {
         padding: 5rem 7% 2rem;
     }
 
+    .about-content {
+        padding: 0 10rem 0 10rem;
+    }
+
     .about img {
         width: 20vw;
     }
-
-    .container-project {
-        width: 70vw;
-        height: 100vh;
-        padding: 0;
-    }
-
 }
 
 @media(max-width: 1200px) {
@@ -522,8 +553,11 @@ span {
     }
 
     .container-project {
-        width: 80vw;
-        height: 100vh;
+        width: 90%;
+    }
+
+    .flex.flex-wrap {
+        gap: 5rem;
     }
 
 }
@@ -565,7 +599,7 @@ span {
     }
 
     .about-content {
-        margin-right: 3vw;
+        padding: 0 7rem 0 7rem;
     }
 
     .about img {
@@ -582,8 +616,7 @@ span {
     }
 
     .container-project {
-        width: 90vw;
-        height: 100vh;
+        width: 90%;
     }
 
     section {
@@ -618,7 +651,11 @@ span {
 
     .about {
         flex-direction: column-reverse;
-        padding: 5rem 7% 10rem;
+        padding: 15% 8%;
+    }
+
+    .about-content {
+        padding: 0;
     }
 
     .about img {
@@ -640,18 +677,8 @@ span {
         height: 65%;
     }
 
-    .container-project {
-        padding: 0;
-        width: 100%;
-        height: 100%;
-    }
-
     .center {
         margin-left: 0;
-    }
-
-    .card {
-        margin: 5rem 0;
     }
 
     .card h2 {
@@ -692,4 +719,5 @@ span {
     .circular-progress img {
         width: 80px;
     }
+    
 }

@@ -7,9 +7,9 @@
 				<h3>Bonjour, Je suis</h3>
 				<h1>Lola Vilatte</h1>
 				<h3>
-					<span>Développeuse Web Junior</span>
+					<span>Développeuse Web</span>
 				</h3>
-				<p>Diplômée du titre professionnel Concepteur développeur d'applications, je recherche mon premier poste en tant que développeuse web de préférence orienté back-end. Passionnée par la création d'applications utiles et bien structurées, je souhaite rejoindre une équipe où je pourrai continuer à apprendre, relever des défis techniques et contribuer à des projets concrets, notamment liés à l'IA, tout en apportant ma rigueur et ma curiosité technique.</p>
+				<p>Développeuse web diplômée du Titre Professionnel Concepteur Développeur d'Applications, je maîtrise les aspects full-stack du développement, avec une affinité particulière pour le back-end. Passionnée par la conception d'applications utiles, performantes et bien structurées, j'aime allier logique métier et expérience utilisateur. Je souhaite rejoindre une équipe où je pourrai continuer à apprendre, relever des défis techniques et contribuer à des projets concrets, notamment autour de l'intelligence artificielle, tout en apportant ma rigueur et ma curiosité technique.</p>
 				<div class="social-media">
 					<a href="https://www.linkedin.com/in/lola-vilatte/" target="_blank">
 						<i class='bx bxl-linkedin'></i>
@@ -34,19 +34,19 @@
 					<span>Moi</span>
 				</h2>
 				<div>
-					<p>Après plusieurs années en tant que barmaid, j'ai décidé de me reconvertir dans ce domaine qui m'a toujours passionnée. On m'a dirigée en premier lieu vers le centre de formation Afpa où j'ai appris les bases du développement web. Suite à cette expérience j'ai pu intégrer l'école
-						<strong>
-							<a href="https://ri7.fr/" id="ri7">Ri7</a>
-						</strong>
-						où je suis actuellement en formation pour le titre
-						<span>Développeur Web et Web Mobile.</span>
+					<p>
+					Lors de ma dernière année de formation <span>en alternance</span>, j'ai participé au développement d'un CRM complexe pour une école, comprenant trois dashboards adaptés aux rôles manager, professeur et étudiant. J'ai contribué à la conception et à l'implémentation de nouvelles fonctionnalités, ainsi qu'à l'intégration <span>d'agents d'intelligence artificielle</span> permettant d'analyser automatiquement les projets GitHub des étudiants.
+					</p>
+					<p>
+					Parallèlement, j'ai assuré la maintenance du <span>site vitrine</span> de l'école et développé mon projet de fin d'année : une application Symfony/Twig destinée aux plongeurs certifiés, permettant de partager et d'échanger des informations sur les milieux sous-marins. Cette plateforme propose notamment une carte mondiale des spots de plongée et un suivi de la biodiversité, ainsi qu'un outil de reconnaissance d'images pour identifier les espèces rencontrées durant les plongées, contribuant ainsi au recensement des espèces tout en sensibilisant à la préservation nécessaire des milieux sous-marins.
 					</p>
 				</div>
 				<div class="read-more" id="read-more">
-					<p>Afin de poursuivre vers le titre
-						<span>Concepteur, Développeur d'Applications</span>
-						je recherche une entreprise qui accepterait de me former pour une durée d'un an à partir de septembre 2023.
-						<br>
+					<p>
+					Bien que j'aie une préférence personnelle pour le back-end, ces expériences m'ont permis de consolider mes compétences <span>full-stack</span>, tout en appliquant les bonnes pratiques de code structuré et maintenable. Curieuse et rigoureuse, j'aime apprendre, expérimenter de nouvelles technologies et transformer des idées en solutions concrètes.
+					</p>
+					<p>
+					⚠️ Pour des raisons de confidentialité, je ne peux pas mettre en ligne mes principaux projets réalisés en alternance, mais je serai ravie de les présenter lors d'un entretien ou d'une démonstration privée.
 					</p>
 				</div>
 			</p>
@@ -74,7 +74,17 @@
 			</div>
 			<div class="skill">
 				<div class="circular-progress">
-					<img src="images/typescript.svg" alt="Logo TypeScript">
+					<img src="images/php.svg" alt="Logo PHP">
+				</div>
+			</div>
+			<div class="skill">
+				<div class="circular-progress">
+					<img src="images/node-js.svg" alt="Logo NodeJS">
+				</div>
+			</div>
+			<div class="skill">
+				<div class="circular-progress">
+					<img src="images/symfony.png" alt="Logo Symfony">
 				</div>
 			</div>
 			<div class="skill">
@@ -84,27 +94,12 @@
 			</div>
 			<div class="skill">
 				<div class="circular-progress">
-					<img src="images/bootstrap.svg" alt="Logo BootStrap">
-				</div>
-			</div>
-			<div class="skill">
-				<div class="circular-progress">
 					<img src="images/tailwindcss-icon.svg" alt="Logo Tailwind">
 				</div>
 			</div>
 			<div class="skill">
 				<div class="circular-progress">
-					<img src="images/wordpress.svg" alt="Logo WordPress">
-				</div>
-			</div>
-			<div class="skill">
-				<div class="circular-progress">
-					<img src="images/php.svg" alt="Logo PHP">
-				</div>
-			</div>
-			<div class="skill">
-				<div class="circular-progress">
-					<img src="images/node-js.svg" alt="Logo NodeJS">
+					<img src="images/react.png" alt="Logo React">
 				</div>
 			</div>
 			<div class="skill">
@@ -122,15 +117,19 @@
 					<img src="images/github.png" alt="Logo GitHub">
 				</div>
 			</div>
-		</section>
-		<section class="projects" id="projects">
-			<h2>Mes<span>
-					projets</span>
-			</h2>
-			<div class="flex flex-wrap pad">
-				{% include "../layouts/_projectsView.twig" %}
+			<div class="skill">
+				<div class="circular-progress">
+					<img src="images/docker.png" alt="Logo Docker">
+				</div>
 			</div>
 		</section>
+		<section class="projects" id="projects">
+			<h2>Mes<span>projets</span>
+			</h2>
+		</section>
+		<div class="flex flex-wrap">
+				{% include "../layouts/_projectsView.twig" %}
+			</div>
 		<section id="contact" class="contact">
 			<h2>Contactez-<span>moi</span>
 			</h2>

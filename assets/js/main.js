@@ -36,7 +36,7 @@ window.onscroll = () => {
 
 let circularProgressList = document.querySelectorAll('.circular-progress');
 
-let progressEndValueList = [95, 80, 65, 65, 55, 50, 65, 65, 70, 65, 70, 55, 50];
+let progressEndValueList = [100, 95, 85, 85, 70, 85, 90, 85, 50, 80, 65, 70, 60];
 
 let speed = 25;
 
